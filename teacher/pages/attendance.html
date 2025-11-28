@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Take Attendance</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../../admin/js/auth.js"></script>
+  <script> requireRole("teacher"); </script>
+
+  <link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body>
+<section class="container">
+  <div class="header">
+    <h1>Take Attendance</h1>
+    <button id="back-btn" class="btn-primary">Back to Sessions</button>
+  </div>
+
+  <div id="session-info" class="session-info"></div>
+
+  <form id="attendance-form">
+    <div id="students-area" class="students-area">
+      <!-- student list with checkboxes injected here -->
+    </div>
+
+    <div style="margin-top:12px;">
+      <button type="submit" class="btn-primary">Save Attendance</button>
+    </div>
+  </form>
+
+  <div id="msg" style="margin-top:12px;color:#c00"></div>
+</section>
+
+<script src="../js/attendance.js"></script>
+</body>
+</html>

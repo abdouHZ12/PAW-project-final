@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Panel</title>
+
+    <link rel="stylesheet" href="./css/sideteacher.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../admin/js/auth.js"></script>
+
+    <script>
+        requireRole("teacher");
+    </script>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <h2 class="logo">TEACHER</h2>
+
+        <ul class="menu">
+            <li data-page="sessions">My Sessions</li>
+
+            <li class="logout-btn">Logout</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="content-area">
+        <h1>Welcome Teacher</h1>
+        <p>Select an option from the sidebar.</p>
+    </main>
+
+    <script src="./js/teacher.js"></script>
+
+</body>
+</html>

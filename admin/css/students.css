@@ -1,0 +1,269 @@
+/* ============================
+   GENERAL PAGE LAYOUT
+=============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+/* ============================
+   HEADER SECTION (Title + Button)
+=============================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Page Title */
+h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #333;
+}
+
+/* Create Button */
+#btn-open-create {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+#btn-open-create:hover {
+    background: #1e40af;
+}
+
+
+
+/* ============================
+   TABLE STYLES
+=============================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #2563eb;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* Center align the Actions column header */
+thead th:last-child {
+    text-align: center;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Center align the Actions column cells */
+tbody td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #f3f4f6;
+}
+
+
+
+/* ============================
+   ACTION BUTTONS (Edit/Delete)
+=============================== */
+
+.btn-edit,
+.btn-delete {
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.btn-edit {
+    background: #10b981;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #059669;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #dc2626;
+}
+
+
+
+/* ============================
+   MODAL OVERLAY
+=============================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+/* ============================
+   MODAL BOX
+=============================== */
+
+.modal-box {
+    background: white;
+    padding: 25px;
+    width: 420px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-box h2 {
+    margin-top: 0;
+    color: #111;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.close-modal,
+#close-create,
+#close-edit {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    width: auto;
+    padding: 0;
+}
+
+.close-modal:hover,
+#close-create:hover,
+#close-edit:hover {
+    color: #333;
+}
+
+
+
+/* ============================
+   FORM FIELDS
+=============================== */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="hidden"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus
+input[type="password"]:focus {
+    border-color: #2563eb;
+}
+
+
+
+/* ============================
+   FORM BUTTONS
+=============================== */
+
+form {
+    position: relative;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #1e40af;
+}
+
+button[type="button"] {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    background: #6b7280;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background: #4b5563;
+}

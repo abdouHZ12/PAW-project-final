@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Students</title>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+    requireRole("admin");
+    </script>
+    <link rel="stylesheet" href="../css/students.css">
+</head>
+
+<body>
+
+    <main id="student-page">
+
+        <div class="header">
+            <h1>Students</h1>
+            <button id="btn-open-create">+ Add Student</button>
+        </div>
+
+        <!-- STUDENT TABLE -->
+        <table id="students-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Matricule</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="students-body">
+            </tbody>
+        </table>
+
+    </main>
+
+    <!-- CREATE MODAL -->
+    <div class="modal hidden" id="create-student-modal">
+        <div class="modal-box">
+            <h2>Create Student</h2>
+
+            <form id="create-student-form">
+
+                <label>Full Name</label>
+                <input type="text" id="full_name" name="full_name">
+
+                <label>Matricule</label>
+                <input type="text" id="matricule" name="matricule">
+
+                <label>Username</label>
+                <input type="text" id="username" name="username">
+
+                <label>Password</label>
+                <input type="password" id="password" name="password">
+
+                <button type="submit">Save</button>
+                <button type="button" id="close-create">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- EDIT MODAL -->
+    <div class="modal hidden" id="edit-student-modal">
+        <div class="modal-box">
+            <h2>Edit Student</h2>
+
+            <form id="edit-student-form">
+
+                <input type="hidden" id="edit_id" name="id_student">
+
+                <label>Full Name</label>
+                <input type="text" id="edit_full_name" name="full_name">
+
+                <label>Matricule</label>
+                <input type="text" id="edit_matricule" name="matricule">
+
+                <button type="submit">Update</button>
+                <button type="button" id="close-edit">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/students.js"></script>
+
+</body>
+</html>

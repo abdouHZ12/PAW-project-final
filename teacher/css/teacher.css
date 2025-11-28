@@ -1,0 +1,107 @@
+/* teacher.css - matches admin theme */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+}
+
+.container {
+    width: 95%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #222;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.sessions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.session-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e8eefc;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.session-card .session-row {
+    margin: 4px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.session-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-attend {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.students-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.student-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    background: #fafafa;
+    border: 1px solid #eee;
+}
+
+.student-name {
+    font-weight: 600;
+}
+
+.student-mat {
+    font-size: 13px;
+    color: #6b7280;
+    margin-left: auto;
+}
+
+.empty {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}

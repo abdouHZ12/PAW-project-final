@@ -1,0 +1,159 @@
+/* GLOBAL ------------------------------------------------------ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6fa; /* soft grey */
+    display: flex;
+    color: #1f2937;
+    overflow-x: hidden; /* optional safety */
+}
+
+/* SIDEBAR ------------------------------------------------------ */
+#sidebar {
+    width: 240px;
+    min-width: 240px;      /* ← IMPORTANT: NEVER shrink */
+    max-width: 240px;      /* ← IMPORTANT: NEVER grow */
+    background: #ffffff;
+    height: 100vh;
+    padding: 25px 20px;
+    box-sizing: border-box; /* ← KEEP PADDING WITHOUT CHANGING WIDTH */
+    border-right: 1px solid #e5e7eb;
+}
+
+#sidebar .logo {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* MENU ITEMS --------------------------------------------------- */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.menu li:hover {
+    background: #f1f5ff; /* soft blue hover */
+}
+
+.menu li.active {
+    background: #dbe7ff;  /* soft blue highlight */
+    color: #1e3a8a;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Blue underline */
+.menu li.active::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 12px;
+    right: 12px;
+    height: 3px;
+    background: #1e3a8a;
+    border-radius: 10px;
+}
+
+/* LOGOUT BUTTON ------------------------------------------------ */
+.logout-btn {
+    margin-top: 40px !important;
+    background: #dc2626;
+    color: white !important;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+/* CONTENT AREA ------------------------------------------------- */
+#content-area {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+/* PAGE TITLE */
+#content-area h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* TABLE STYLING ------------------------------------------------ */
+.table-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-card thead {
+    background: #1e3a8a; /* strong blue */
+    color: white;
+}
+
+.table-card th,
+.table-card td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.table-card tr:last-child td {
+    border-bottom: none;
+}
+
+/* BUTTONS -------------------------------------------------------- */
+.btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+.btn-blue {
+    background: #2563eb;
+}
+
+.btn-blue:hover {
+    background: #1e40af;
+}
+
+.btn-green {
+    background: #16a34a;
+}
+
+.btn-green:hover {
+    background: #15803d;
+}
+
+.btn-red {
+    background: #dc2626;
+}
+
+.btn-red:hover {
+    background: #b91c1c;
+}

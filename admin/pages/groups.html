@@ -1,0 +1,98 @@
+<!-- admin/pages/groups.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../js/auth.js"></script>
+  <script> requireRole("admin"); </script>
+
+  <link rel="stylesheet" href="../css/groups.css">
+  <title>Groups</title>
+</head>
+<body>
+
+<section class="container">
+    <div class="header">
+        <h1>Groups</h1>
+        <button id="btn-open-create-group" class="btn-primary">+ Add Group</button>
+    </div>
+
+    <div id="groups-grid" class="groups-grid">
+        <!-- cards will be injected here by JS -->
+    </div>
+</section>
+
+<!-- CREATE MODAL -->
+<div class="modal hidden" id="create-group-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Create Group</h2>
+      <button type="button" class="btn-close" id="close-create-group">&times;</button>
+    </div>
+
+    <form id="create-group-form">
+      <div class="form-group">
+        <label>Group name</label>
+        <input type="text" id="create_group_name" name="group_name" required>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" id="cancel-create-group">Cancel</button>
+        <button type="submit" class="btn-submit">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="modal hidden" id="edit-group-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Edit Group</h2>
+      <button type="button" class="btn-close" id="close-edit-group">&times;</button>
+    </div>
+
+    <form id="edit-group-form">
+      <input type="hidden" id="edit_group_id" name="id_group">
+      <div class="form-group">
+        <label>Group name</label>
+        <input type="text" id="edit_group_name" name="group_name" required>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" id="cancel-edit-group">Cancel</button>
+        <button type="submit" class="btn-submit">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ASSIGN STUDENT(S) MODAL -->
+<div class="modal hidden" id="assign-students-modal">
+  <div class="modal-box large">
+    <div class="modal-header">
+      <h2>Assign Students to Group</h2>
+      <button type="button" class="btn-close" id="close-assign">&times;</button>
+    </div>
+
+    <div class="assign-body">
+      <p id="assign-info" style="margin-bottom:16px; font-weight: 500; color: #374151;"></p>
+
+      <div id="students-list" class="students-list">
+        <!-- list injected by JS (checkboxes) -->
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" id="cancel-assign">Cancel</button>
+        <button id="save-assign" class="btn-submit">Save assignments</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/groups.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Sessions</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../../admin/js/auth.js"></script>
+  <script> requireRole("teacher"); </script>
+
+  <link rel="stylesheet" href="./css/teacher.css">
+</head>
+<body>
+<section class="container">
+  <div class="header">
+    <h1>My Sessions</h1>
+  </div>
+
+  <div id="sessions-list" class="sessions-list">
+    <!-- JS injects session cards -->
+  </div>
+  <div id="no-sessions" class="empty" style="display:none">No sessions assigned yet.</div>
+</section>
+
+<script src="./js/session.js"></script>
+</body>
+</html>

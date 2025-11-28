@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin - Teachers</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../js/auth.js"></script>
+  <script>
+    requireRole("admin");
+  </script>
+  
+  <!-- include global/admin css if you have -->
+  <link rel="stylesheet" href="../css/teachers.css"> <!-- reuse students.css or create teachers.css -->
+</head>
+<body>
+
+  <main id="teacher-page">
+    <div class="header">
+      <h1>Teachers</h1>
+      <button id="btn-open-create-teacher">+ Add Teacher</button>
+    </div>
+
+    <table id="teachers-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Username</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="teachers-body"></tbody>
+    </table>
+  </main>
+
+  <!-- CREATE TEACHER MODAL -->
+  <div class="modal hidden" id="create-teacher-modal">
+    <div class="modal-box">
+      <h2>Create Teacher</h2>
+
+      <form id="create-teacher-form">
+        <label>Full Name</label>
+        <input type="text" id="teacher_full_name" name="full_name">
+
+        <label>Username</label>
+        <input type="text" id="teacher_username" name="username">
+
+        <label>Password</label>
+        <input type="password" id="teacher_password" name="password">
+
+        <button type="submit">Save</button>
+        <button type="button" id="close-create-teacher">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EDIT TEACHER MODAL -->
+  <div class="modal hidden" id="edit-teacher-modal">
+    <div class="modal-box">
+      <h2>Edit Teacher</h2>
+
+      <form id="edit-teacher-form">
+        <input type="hidden" id="edit_teacher_id" name="id_teacher">
+
+        <label>Full Name</label>
+        <input type="text" id="edit_teacher_full_name" name="full_name">
+
+        <label>Username</label>
+        <input type="text" id="edit_teacher_username" name="username">
+
+        <button type="submit">Update</button>
+        <button type="button" id="close-edit-teacher">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/teachers.js"></script>
+</body>
+</html>

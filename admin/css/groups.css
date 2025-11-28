@@ -1,0 +1,245 @@
+/* groups.css - matches students/sessions theme */
+
+/* page + container */
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 95%;
+  margin: 30px auto;
+  padding: 18px;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.header h1 {
+  margin: 0;
+  color: #222;
+}
+
+/* primary button */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #1e40af; }
+
+/* grid */
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+/* card */
+.group-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 98px;
+}
+
+/* group title */
+.group-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+/* small meta row (optional) */
+.group-meta {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* action buttons */
+.group-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+.group-actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+.edit-btn {
+  background: #10b981;
+  color: white;
+}
+.edit-btn:hover { background: #059669; }
+.assign-btn {
+  background: #f59e0b;
+  color: white;
+}
+.assign-btn:hover { background: #d97706; }
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+.delete-btn:hover { background: #dc2626; }
+
+/* modal (reuse existing pattern) */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.hidden { display: none !important; }
+
+.modal-box {
+  background: white;
+  padding: 24px;
+  width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  position: relative;
+}
+.modal-box.large { width: 720px; max-height: 80vh; overflow:auto; }
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-box h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 4px;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.btn-close:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* form */
+.form-group { margin-bottom: 16px; }
+.form-group label { display:block; margin-bottom:8px; font-weight:600; color:#333; }
+.form-group input[type="text"] {
+  width:100%;
+  padding:12px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+.form-group input[type="text"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Form buttons */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn-submit {
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.btn-submit:hover {
+  background: #1d4ed8;
+}
+
+.btn-cancel {
+  background: #6b7280;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.btn-cancel:hover {
+  background: #4b5563;
+}
+
+/* students-list (checkbox list inside assign modal) */
+.students-list {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  max-height: 46vh;
+  overflow:auto;
+  padding:6px;
+  border:1px solid #eee;
+  border-radius:6px;
+  background:#fafafa;
+}
+.student-row {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:8px;
+  border-radius:6px;
+  background:white;
+  border:1px solid #f0f0f0;
+}
+
+/* small responsive tweak */
+@media (max-width:520px) {
+  .modal-box.large { width: 92%; }
+  .groups-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}

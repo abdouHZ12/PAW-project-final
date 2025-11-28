@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+        requireRole("admin");
+    </script>
+
+</head>
+
+<body>
+<div>
+    
+</div>
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <h2 class="logo">ADMIN</h2>
+
+            <ul class="menu">
+                <li data-page="students">Students</li>
+                <li data-page="teachers">Teachers</li>
+                <li data-page="modules">Modules</li>
+                <li data-page="groups">groups</li>
+                <li data-page="sessions">Sessions</li>
+
+                <li class="logout-btn">Logout</li>
+            </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="content-area">
+        <h1>Welcome Admin</h1>
+        <p>Select a module from the sidebar.</p>
+    </main>
+
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>
